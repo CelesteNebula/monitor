@@ -1,3 +1,5 @@
+后端项目根目录创建文件夹resources，两个MP4文件需命名为“vd1.mp4”、“vd2.mp4”。
+
 前端apidemo文件夹，后端APIProject文件夹。前端使用vue3搭建项目作为界面，后端使用Flask框架，前后端使用websocket通信。
 
 将调用两个AI接口用于车辆检测、车型识别。
