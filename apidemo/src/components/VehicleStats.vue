@@ -43,7 +43,7 @@ export default {
     setInterval(() => {
       this.fetchStats();
       this.fetchTraffic();
-    }, 5000); // 每5秒更新一次数据
+    }, 5000);
   },
   methods: {
     fetchStats() {
@@ -86,9 +86,11 @@ export default {
   background-color: #fff;
   padding: 2rem;
   border-radius: 8px;
-  max-width: 600px; /* 增加最大宽度 */
+  max-width: 600px;
   width: 100%;
-  overflow-y: auto; /* 增加垂直滚动条 */
+  max-height: 80%;
+  overflow-y: auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .close-btn {
@@ -98,6 +100,8 @@ export default {
   padding: 0.5rem 1rem;
   cursor: pointer;
   margin-bottom: 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
 .close-btn:hover {

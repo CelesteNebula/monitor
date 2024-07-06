@@ -91,18 +91,19 @@ export default {
 </script>
 
 <style>
-/* 样式保持不变 */
 #app {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  font-family: 'Arial', sans-serif;
 }
 
 header {
-  background-color: #555;
+  background-color: #007bff;
   color: white;
   text-align: center;
   padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .main-container {
@@ -114,11 +115,12 @@ header {
 aside {
   display: flex;
   flex-direction: column;
-  background-color: #aaa;
+  background-color: #343a40;
   padding: 1rem;
   align-items: center;
-  width: 80px;
+  width: 100px;
   justify-content: flex-start;
+  color: white;
 }
 
 .sidebar-icon {
@@ -127,15 +129,20 @@ aside {
   cursor: pointer;
 }
 
+.sidebar-icon:hover {
+  color: #007bff;
+}
+
 main {
   flex: 1;
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  background-color: #f0f0f0;
+  background-color: #f8f9fa;
 }
 
 .grid-container {
+  
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem;
@@ -143,12 +150,14 @@ main {
 }
 
 .grid-item {
-  background-color: #ddd;
+  background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
 button {
@@ -158,13 +167,14 @@ button {
   padding: 0.5rem 1rem;
   cursor: pointer;
   margin-bottom: 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
   background-color: #0056b3;
 }
 
-/* 统计数据弹窗样式 */
 .stats-dialog {
   position: fixed;
   top: 0;
@@ -184,8 +194,8 @@ button:hover {
   border-radius: 8px;
   max-width: 600px;
   width: 100%;
-  max-height: 80%; /* 设置最大高度 */
-  overflow-y: auto; /* 启用垂直滚动条 */
+  max-height: 80%;
+  overflow-y: auto;
 }
 
 .close-btn {
@@ -195,6 +205,8 @@ button:hover {
   padding: 0.5rem 1rem;
   cursor: pointer;
   margin-bottom: 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
 .close-btn:hover {

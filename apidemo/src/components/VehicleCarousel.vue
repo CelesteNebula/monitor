@@ -30,7 +30,7 @@ export default {
     socket.on(`${this.streamName}_recognized`, (data) => {
       this.vehicles.push(data);
       if (this.vehicles.length > 3) {
-        this.vehicles.shift(); // 保持最多显示三张图片
+        this.vehicles.shift();
       }
     });
   }
@@ -42,16 +42,25 @@ export default {
   display: flex;
   overflow-x: auto;
   white-space: nowrap;
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .carousel-item {
   flex: 0 0 auto;
   margin-right: 10px;
   cursor: pointer;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .carousel-item img {
   width: 100px;
   height: auto;
+  border-radius: 4px;
 }
 </style>

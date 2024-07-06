@@ -13,8 +13,8 @@ CORS(app, resources={r"/*": {"origins": "http://localhost:8080"}})
 socketio = SocketIO(app, cors_allowed_origins="*")
 
 # 初始化视频流
-video_stream_1 = cv2.VideoCapture(r'D:\PycharmProjects\APIProject\resources\vd1.mp4')
-video_stream_2 = cv2.VideoCapture(r'D:\PycharmProjects\APIProject\resources\vd2.mp4')
+video_stream_1 = cv2.VideoCapture(r'resources/vd1.mp4')
+video_stream_2 = cv2.VideoCapture(r'resources/vd2.mp4')
 
 # 访问令牌
 access_token = '24.616137c62e6332b42435f68f1c720531.2592000.1722739901.282335-89991653'
